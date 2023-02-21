@@ -21,7 +21,51 @@
         <h2>HTML</h2>
         <ul>
           <li>The head element contains information about the webpage.</li>
-          <li>The body element represents the visible content shown to us.</li>
+        <ol>
+          <li>The head element contains the metadata for my web application.
+              Although they are typically not seen by users, they contain important
+              information about accessibility, search engines, and performance.</li>
+          <li> The following metadata tags are used in the head:</li>
+          <li>The style element defines the CSS styles associated with a website.</li>
+          <li>The base element defines the base URL for a webpage.</li>
+          <li>The link element connects an external resource to the HTML document.</li>
+          <li>The meta element defines metadata such as the character set, description,
+            keywords, author, and viewport.</li>
+          <li>The script element embeds client-side scripts in the HTML document.</li>
+        </ol>
+        <li>The body element represents the visible content shown to us.</li>
+        <li>Elements that are nested inside other elements are called child elements.</li>
+        <li>For example, if there are several elements nested inside of a body element,
+            those elements are the child elements and the body is the parent element.</li>
+        <li>All of the content that we want to display to users must be inside the body
+            element.</li>
+        <li>The body element is an example of a semantic HTML element. In semantic HTML
+            elements, the name of the element describes its content and the role it plays
+            on a webpage.</li>
+        <li>However, some elements are not semantic. These non-semantic elements include
+            "div", which creates a division in the page, and "span", which creates an
+            inline division.</li>
+        <li>An "element" refers to the entire element from opening tag to closing tag,
+            whereas tag refers only to what appears inside the angle brackets.</li>
+        <li>The h1, h2, h3, h4, h5, and h6 heading tags apply a steadily decreasing font
+            to the associated heading name or title as one proceeds down the hierarchy from
+            h1 to h6, i.e. from main heading to the various subheadings.</li>
+        <li>The "p" element represents a paragraph or block of text.</li>
+        <li>The "img" element contains information about images that are displayed on the
+            webpage. It can contain various attributes, with the "src" attribute being the
+            most important. Src = source and typical points to a URL or image file name on
+            the local hard drive.</li>
+        <li>The "br" element creates a line break.</li>
+        <li>Neither img nor br have a closing tag, with their syntax being: < ... />.</li>
+        <li>The "a" or anchor element creates links to the same or another webpage for
+            additional information, with the "href" attribute pointing to the URL for the link.</li>
+        <li>The "main" element holds content.</li>
+        <li> The footer element comes at the very end of the webpage, and typically holds
+            info relating to the author's name, copyright, site navigation information, and other
+            references.</li>
+        <li>In the body of the webpage, the following parent-child structure sectional elements
+            are used, in descending hierarchical order: header, main, section, div, card... and
+            and p, img, a, ul or ol can be inserted anywhere, at any level below the header and h1.</li>
         </ul>
       </section>
 
@@ -30,6 +74,69 @@
         <ul>
           <li>A margin indicates how much space we want around the outside of an element.</li>
           <li>A padding indicates how much space we want around the content inside an element.</li>
+          <li>There are three kinds of styling: inline CSS, internal CSS style sheet, and external CSS
+            style sheet.</li>
+        <ol>
+          <li>Inline styles apply to a specific HTML tag, using a style attribute with a CSS rule to
+              style a particular page element only. They are useful for quick and permanent changes but are
+              less flexible than external and internal style sheets.</li>
+          <li>An entire internal stylesheet can be directly embedded in the HTML file by using a style
+              element in the head element. This internal style sheet contains CSS rules for the webpage in
+              the head section of the HTML file. The rules only apply to that page, and you can configure
+              CSS classes and IDs, which are used to identify elements, to style multiple elements in the
+              page code. Again, a single change to the CSS rule will apply to all tagged page elements.</li>
+          <li>The most common way to style a webpage is by using an external CSS style sheet. This is
+              preferred in most cases because it allows developers to keep all their CSS rules in a separate
+              file, which makes design changes easier. When using an external style sheet, we link the file
+              using a link element placed in the HTML's head.</li>
+          </ol>
+          <li>How to create an external CSS style sheet for a new project and add it to the coding files:</li>
+          <ol>
+            <li>From inside my project directory in Git Bash (e.g. prework-study-guide), enter the <command>
+              "cd assets", and then enter the command "touch style.css".</li>
+            <li>Enter git status to check what Git branch I am on. If it is not the main branch, switch to it
+              and then create a new feature branch for development of the CSS style sheet:
+              "git status", and then "git checkout main", and then "git checkout -b feature/add-css".</li>
+            <li>Then switch to VS Code by entering "code ." in Git Bash. Open the new style.css style sheet
+              file in the assets directory of the project code in VS Code. The style sheet may now be created
+              here, either ex novo or by copying and pasting an externally sourced style sheet.</li>
+          </ol>
+          <li>A CSS rule in code has the following format: first the selector, such as *, or h1, or section,
+            or card, or ul, or ol, or..... Then comes a left curly brace {, then inside the brace we have a
+            declaration, composed of a property, a colon, a space, and then a value, and finally a semicolon.
+            A right curly brace } closes and completes this individual CSS rule for styling part or all of
+            the webpage. Several declarations may be included in one declaration block, i.e. the entire space
+            contained between the two curly braces. For visual clarity, when writing the code in the code editor
+            (e.g. VS Code), the selector and left curly brace { are written on the first line, then the first
+            declaration (i.e. property: value;) are written on the second line, and any additional declarations
+            are written one-by-one on successive lines, and then the right curly brace } is entered on the final
+            line.</li>
+          <li> Two or more selectors may be combined into a single CSS rule as follows: write each selector name,
+            then a comma, and then the next name and comma, etc. For example: header, footer. In the coding editor
+            write each selector and its comma on a separate line.</li>
+          <li> The CSS box model illustrates the paradigm for the parent-child and graphic hierarchy within every
+            HTML element. Every HTML element is essentially a box. In fact, it is a set of boxes, with each one
+            placed one inside the other. The outermost box is the Margin. The next box is the Border. The third
+            box is the Padding. The fourth box is the Content, at the center, and which constitutes the innermost
+            box.</li>
+          <li>The reason for combining selectors into a single rule is to apply the DRY (DO NOT REPEAT YOURSELF)
+            coding principle in my coding projects. The DRY principle ensures brevity, simplicity, succinctness,
+            elegance, and thus readibility and simplicity, which improve the overall efficiency and effectiveness
+            of my coding work. Adherence to the DRY principle is a PARAMOUNT QUALITY AND VIRTUE IN CODING.</li>
+          <li>The opposite of the DRY principle is the WET (WE ENJOY TYPING) principle, which features the
+            unnecessary repitition of the same coding in several or many different places of the code, unnecessarily
+            and even confusingly overburdening it with excess visual and interpretative weight, and possible styling
+            or functional conflicts. DRY is good, and WET is bad.</li>
+          <li>The style sheet, style.css, is linked to the HTML project coding file, index.html, by adding a meta
+            element to the head element of the web page. It goes after the final meta element and before the title
+            element in the head. The link element is a tag using the word "link" at the beginning, right after the
+            opening left angle bracket. It is followed by the following words and characters exactly as follows:
+            rel="stylesheet" href="./assets/style.css". The closing right angle bracket immediately follows the
+            closing quotation mark and is attached to that.</li>
+          <li>The link element creates the connection to the external file.</li>
+          <li>The rel attributespecifies the relationship between the current document and the linked document
+            resource.</li>
+          <li>The href attribute specifies the location (URL) of the external resource.</li>
         </ul>
       </section>
 
@@ -38,7 +145,51 @@
         <ul>
           <li>git status: checks what branch we are currently on</li>
           <li>git checkout -b branch-name: creates a new branch and switches to it</li>
+          <li>How to add a new feature branch in Git Hub:</li>
         </ul>
+          <ol>
+            <li>on Git Bash, navigate to project directory using the cd command</li>
+            <li>once in the project directory, enter "git status command"</li>
+            <li>then enter "git checkout -b feature/add-XYZ" (e.g. feature/add-html)</li>
+            <li>after display of screen message "Switched to a new branch 'feature/add-XYZ' ", enter "git status"</li>
+            <li>terminal screen should display: "On branch feature/add-XYZ nothing to commit, working tree clean"</li>
+            <li>if not already in VS Code, open that app by entering "code ." in Git Bash and then proceed with work</li>
+          </ol>
+        <ul>
+          <li>How to commit, pull, push, and merge a new project change on Git Hub and then update my local repository:</li>
+        </ul>
+          <ol>
+            <li>On the command line in Git Bash, ensure that I am on the feature/add-name
+              branch so that I can add the changed files in my working directory to the staging area of Git.</li>
+            <li>On the command line in Git Bash, enter "git add -A"</li>
+            <li>The "add -A" command commits all files in the working branch.</li>
+            <li>Then, enter the following command and message: git commit -m "Added code to XYZ file"</li>
+            <li>"-m" associates a message with the commit.</li>
+            <li>I should then see a message on my command line confirming addition of the new code to my branch.</li>
+            <li>Then ensure that my current branch is up to date before opening my pull request. This is done
+              by syncing my local branch with the remote branch in Git Hub. Enter the following command in Git Bash:
+              git pull origin main</li>
+            <li>I should see a command line message more or less like "Already up to date" in response to this action.</li>
+            <li>Then push up all of my changes with the following command: git push origin feature/add-name</li>
+            <li>Next, directly in Git Hub, navigate to my current project repo. Once there, navigate to the
+              feature/add-XYZ branch.</li>
+            <li>Once on my Git Hub feature branch page, click on the "Pull Requests" tab on menu row near the top of the window.</li>
+            <li>Once on the pull requests page, find and click the green "New pull request" button.</li>
+            <li>Next, compare the two branches that I want to merge. The base branch that I want to merge into should come first.
+              In my case, that is the main branch. I want to merge my feature/add-XYZ branch, so that is my compare branch.</li>
+            <li>Once on the pull request form, give my PR (pull request) a title and a short description of the changes.</li>
+            <li>Then click the green "Create pull request button". That will take me to the pull requests page.</li>
+            <li>On the next page that appears, find the green "Merge pull request" button. Click on it and also
+              click on the "Confirm" button.</li>
+            <li>Once I have successfully merged, I will see the message "Pull request successfully merged and closed".
+              I may then safely delete the branch.</li>
+            <li>At this point, I can reopen my terminal on Git Bash and update my local repository with the new merged-in feature.
+              To do so, enter the following commands on my terminal:</li>
+            <li>git checkout main</li>
+            <li>git pull origin main</li>
+            <li>I may then return to my Git Hub project Issues page, find the issue addressed by the just-completed commit-pull-push-merge
+               operation and close that issue by clicking on the "Close issue" button.</li>
+          </ol>
       </section>
 
       <section class="card" id="javascript-section">
