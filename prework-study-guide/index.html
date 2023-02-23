@@ -13,6 +13,7 @@
     <header id="top">
       <h1>Prework Study Guide</h1>
       <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." />
+      <h2>✨ Open the Console to See What's Happening ✨</h2>
     </header>
 
     <main>
@@ -21,6 +22,7 @@
         <h2>HTML</h2>
         <ul>
           <li>The head element contains information about the webpage.</li>
+        </ul>
         <ol>
           <li>The head element contains the metadata for my web application.
               Although they are typically not seen by users, they contain important
@@ -33,6 +35,7 @@
             keywords, author, and viewport.</li>
           <li>The script element embeds client-side scripts in the HTML document.</li>
         </ol>
+        <ul>
         <li>The body element represents the visible content shown to us.</li>
         <li>Elements that are nested inside other elements are called child elements.</li>
         <li>For example, if there are several elements nested inside of a body element,
@@ -53,7 +56,7 @@
         <li>The "p" element represents a paragraph or block of text.</li>
         <li>The "img" element contains information about images that are displayed on the
             webpage. It can contain various attributes, with the "src" attribute being the
-            most important. Src = source and typical points to a URL or image file name on
+            most important. Src = source and typically points to a URL or image file name on
             the local hard drive.</li>
         <li>The "br" element creates a line break.</li>
         <li>Neither img nor br have a closing tag, with their syntax being: < ... />.</li>
@@ -76,6 +79,7 @@
           <li>A padding indicates how much space we want around the content inside an element.</li>
           <li>There are three kinds of styling: inline CSS, internal CSS style sheet, and external CSS
             style sheet.</li>
+        </ul>
         <ol>
           <li>Inline styles apply to a specific HTML tag, using a style attribute with a CSS rule to
               style a particular page element only. They are useful for quick and permanent changes but are
@@ -90,7 +94,9 @@
               file, which makes design changes easier. When using an external style sheet, we link the file
               using a link element placed in the HTML's head.</li>
           </ol>
+        <ul>
           <li>How to create an external CSS style sheet for a new project and add it to the coding files:</li>
+        </ul>
           <ol>
             <li>From inside my project directory in Git Bash (e.g. prework-study-guide), enter the <command>
               "cd assets", and then enter the command "touch style.css".</li>
@@ -101,6 +107,7 @@
               file in the assets directory of the project code in VS Code. The style sheet may now be created
               here, either ex novo or by copying and pasting an externally sourced style sheet.</li>
           </ol>
+          <ul>
           <li>A CSS rule in code has the following format: first the selector, such as *, or h1, or section,
             or card, or ul, or ol, or..... Then comes a left curly brace {, then inside the brace we have a
             declaration, composed of a property, a colon, a space, and then a value, and finally a semicolon.
@@ -195,8 +202,94 @@
       <section class="card" id="javascript-section">
         <h2>JavaScript</h2>
         <ul>
-          <li>Enter your JavaScript notes here</li>
+          <li>In Javascript, a value is considered falsy if it is one of the following values: 0, -0, On, "",
+            null, undefined, NaN, or a Boolean data type with the value of false. All other values, including
+            a Boolean with the value of true, are considered truthy.</li>
+          <li>Examples of truthy values in JavaScript (which will be coerced to true in boolean contexts,
+            and thus execute the if block):</li>
         </ul>
+        <ol>
+          <li>if (true)</li>
+          <li>if ({})</li>
+          <li>if ([])</li>
+          <li>if (42)</li>
+          <li>if ("0")</li>
+          <li>if ("false")</li>
+          <li>if (new Date())</li>
+          <li>if (-42)</li>
+          <li>if (12n)</li>
+          <li>if (3.14)</li>
+          <li>if (-3.14)</li>
+          <li>if (Infinity)</li>
+          <li>if (-Infinity)</li>
+        </ol>
+      <ul>
+        <li>If the first object is truthy, the logical AND operator returns the second operand:</li>
+      </ul>
+        <ol>
+        <li>true && "dog" // returns "dog"</li>
+        <li>[] && "dog" // returns "dog"</li>
+        </ol>
+      <ul>
+        <li>Also see Falsy, Type coercion, Boolean, Boolean coercion.</li>
+        <li><b>***The strict equality operator (===) checks to see if two values are equal, and returns a
+          Boolean result true if the values are equal and false if the values are not equal.***</b></li>
+        <li><b>Arrays</b> and <b>for Loops:</b></li>
+        </ul>
+        <ol>
+          <li>An <b>array</b> is a single variable that is used to hold a group of data. Arrays are
+            typically used to hold data that is related in some way.</li>
+          <li>To create an array, we declare a variable in the same way that we declared a variable
+            with only one data item. That is, we use var and then give the variable a name. However,
+            instead of assigning the variable to a single value, we assign the variable to a group
+            of values.</li>
+          <li>For example: var shapes = ["triangle", "square", "pentagon", "circle"];</li>
+          <li>Arrays are useful tools for storing multiple items with different data types in a single
+            variable, but not all arrays must have multiple data types.</li>
+          <li>To work with individual data items inside an array, we need to have one more piece of
+              information: the location of the data item in the array. This location is identified with
+              a unique number called an index. Using each piece of data's index, or location number, we
+              can access individual data inside the array.</li>
+          <li>In JavaScript and many other programming languages, arrays are zero-indexed and sequential.
+            This means that the first item in any array has an index of 0, not 1. The indices, or location
+            identifiers, will always be whole numbers that increase by 1 each time.</li>
+          <li>Each item is assigned an index according to the order in which it is stored in the array.</li>
+          <li>If we wanted to access only the triangle, we start with the name of the variable that stores
+            the array, which in our case is shapes. Then we add the index of triangle to the end of the
+            array name in square brackets, as shown in the following line of code: shapes[0]; </li>
+          <li>In order to see this in action, we should log it in the console, using the following line of
+              code: console.log(shapes[0]);
+          <li>The most efficient way to change all the values in an array is to use loops, of which there
+            are several types.</li>
+          <li>A <b>for loop</b> uses the predictable pattern of indices to perform a task on all the items in an
+            array by allowing a single code block to be executed over and over.</li>
+          <li>Developers must use another statement, such as the conditional if statement that we just
+            learned, to interrupt the control flow by executing a block of code a specific number of times.</li>
+          <li>By using a for loop, we can tell the computer to go through each of the shapes in our array and
+            log them to the console until there are no shapes left.</li>
+          <li>In order to use the for loop, we need the shape's index and the array's length.</li>
+          <li>The array length is important because the for loop needs to know how many times the code
+            will run until there are no items left in the array. We can find the length of an array by using
+            a built-in property of an array, appropriately named length. A for loop contains the following
+            three important statements:</li>
+          <li>The first statement determines the starting point for our loop. Since we want to start at the
+            beginning of the array, we declare a variable x and give it a value of 0 (because the first index
+            of an array is always 0): var x = 0</li>
+          <li>The second statement is the condition. As long as the number in the variable x is less than the
+            length of the array, the loop will keep running. This will allow the loop to execute one time for
+            each item in the array. We use the length built-in array property on our shapes array to express
+            that condition, as shown in the following line of code: x < shapes.length</li>
+          <li>The final statement is what allows the array to iterate over each item. Since indices follow a
+            predictable pattern, we know the number increases by 1 each time. The code x++ is a shortcut way
+            of writing x+1. Now every time the code loops, x will increase by 1, as shown in the following
+            line of code: x++</li>
+          <li>A for loop starts with "for": for(var x = 0; x < shapes.length; x++) {// code block} </li>
+          <li>Finally, we put the code that we want to be executed for each loop inside curly brackets.
+            In our case, we want each of the items in the shapes array to be logged in the console.
+            In place of an actual index number, however, we can add the variable x from our for loop.
+            Now, each time the code runs, x will increase by 1 and the next array item will log to the console.
+            The following code shows how this is done: for(var x = 0; x < shapes.length; x++) {console.log(shapes[x]); }</li>
+        </ol>
       </section>
 
     </main>
@@ -204,5 +297,6 @@
     <footer>
       <p>I can code!</p>
     </footer>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
